@@ -30,12 +30,12 @@ function operate(operator, first, second) {
 function continueOperation(event) {
     let target = event.target;
     operator = target.textContent;
-    firstNumber = display.value;
+    firstNumber = Number(display.value);
     clearDisplay();
 }
 
 function finishOperation() {
-    secondNumber = display.value;
+    secondNumber = Number(display.value);
     let result = operate(operator, firstNumber, secondNumber);
     display.value = result;
 }
