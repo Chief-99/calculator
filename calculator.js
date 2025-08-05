@@ -5,7 +5,7 @@ let secondNumber;
 
 let numberButtons = document.querySelectorAll('.number-button');
 numberButtons.forEach((button) => {
-    button.addEventListener('click', (event) => console.log(event.target.textContent))
+    button.addEventListener('click', populateDisplay)
 })
 
 function operate(operator, first, second) {
@@ -44,3 +44,7 @@ function divide(a, b) {
     return a / b;
 }
 
+function populateDisplay(event) {
+    let number = event.target.textContent;
+    display.value += number;
+}
