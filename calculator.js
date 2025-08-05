@@ -1,3 +1,5 @@
+const numberButtons = document.querySelectorAll('.number-button');
+const operatorButtons = document.querySelectorAll('.operator-button');
 const display = document.getElementById('display');
 const clearButton = document.getElementById('clear-button');
 let firstNumber;
@@ -50,7 +52,6 @@ function clearDisplay() {
     display.value = '';
 }
 
-let numberButtons = document.querySelectorAll('.number-button');
 numberButtons.forEach((button) => {
     button.addEventListener('click', populateDisplay)
 })
