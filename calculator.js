@@ -1,6 +1,12 @@
+const display = document.getElementById('display');
 let firstNumber;
 let operator;
 let secondNumber;
+
+let numberButtons = document.querySelectorAll('.number-button');
+numberButtons.forEach((button) => {
+    button.addEventListener('click', (event) => console.log(event.target.textContent))
+})
 
 function operate(operator, first, second) {
     let result;
@@ -38,7 +44,3 @@ function divide(a, b) {
     return a / b;
 }
 
-firstNumber = 12;
-secondNumber = 4;
-operator = '+';
-console.log(operate(operator, firstNumber, secondNumber));
