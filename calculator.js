@@ -27,6 +27,14 @@ function operate(operator, first, second) {
     return result;
 }
 
+function continueOperation(event) {
+    let target = event.target;
+    operator = target.textContent;
+    firstNumber = display.value;
+    clearDisplay();
+    console.log(firstNumber, operator);
+}
+
 function add(a, b) {
     return a + b;
 }
@@ -54,5 +62,8 @@ function clearDisplay() {
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', populateDisplay)
+});
+operatorButtons.forEach((button) => {
+    button.addEventListener('click', continueOperation)
 })
 clearButton.addEventListener('click',clearDisplay);
