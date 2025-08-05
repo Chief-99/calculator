@@ -34,6 +34,12 @@ function continueOperation(event) {
     clearDisplay();
 }
 
+function finishOperation() {
+    secondNumber = display.value;
+    let result = operate(operator, firstNumber, secondNumber);
+    display.value = result;
+}
+
 function add(a, b) {
     return a + b;
 }
