@@ -1,11 +1,11 @@
 const numberButtons = document.querySelectorAll('.number-button');
 const operatorButtons = document.querySelectorAll('.operator-button');
+const equalsButton = document.getElementById('equals-button');
 const display = document.getElementById('display');
 const clearButton = document.getElementById('clear-button');
 let firstNumber;
 let operator;
 let secondNumber;
-
 
 function operate(operator, first, second) {
     let result;
@@ -32,7 +32,6 @@ function continueOperation(event) {
     operator = target.textContent;
     firstNumber = display.value;
     clearDisplay();
-    console.log(firstNumber, operator);
 }
 
 function add(a, b) {
@@ -65,5 +64,6 @@ numberButtons.forEach((button) => {
 });
 operatorButtons.forEach((button) => {
     button.addEventListener('click', continueOperation)
-})
-clearButton.addEventListener('click',clearDisplay);
+});
+equalsButton.addEventListener('click', finishOperation);
+clearButton.addEventListener('click', clearDisplay);
