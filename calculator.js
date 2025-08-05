@@ -4,10 +4,6 @@ let firstNumber;
 let operator;
 let secondNumber;
 
-let numberButtons = document.querySelectorAll('.number-button');
-numberButtons.forEach((button) => {
-    button.addEventListener('click', populateDisplay)
-})
 
 function operate(operator, first, second) {
     let result;
@@ -21,7 +17,7 @@ function operate(operator, first, second) {
         case '*':
             result = multiply(first, second);
             break;
-        case '/':
+            case '/':
             result = divide(first, second);
             break;
     }
@@ -49,3 +45,13 @@ function populateDisplay(event) {
     let number = event.target.textContent;
     display.value += number;
 }
+
+function clearDisplay() {
+    display.value = '';
+}
+
+let numberButtons = document.querySelectorAll('.number-button');
+numberButtons.forEach((button) => {
+    button.addEventListener('click', populateDisplay)
+})
+clearButton.addEventListener('click',clearDisplay);
