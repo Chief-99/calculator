@@ -1,4 +1,5 @@
 const display = document.getElementById('display');
+const clearButton = document.getElementById('clear-button');
 let firstNumber;
 let operator;
 let secondNumber;
