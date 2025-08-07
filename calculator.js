@@ -19,7 +19,7 @@ function operate(operator, first, second) {
         case '*':
             result = multiply(first, second);
             break;
-            case '/':
+        case '/':
             result = divide(first, second);
             break;
     }
@@ -57,12 +57,6 @@ function divide(a, b) {
     return a / b;
 }
 
-function populateDisplay(event) {
-    let number = event.target.textContent;
-    display.value += number;
-    removeActiveClass();
-}
-
 function clearDisplay() {
     display.value = '';
 }
@@ -80,7 +74,12 @@ function testActiveClass() {
 }
 
 numberButtons.forEach((button) => {
-    button.addEventListener('click', populateDisplay)
+    button.addEventListener('click', (event) => {
+        let number = event.target.textContent;
+        testActiveClass();
+        display.value += number;
+        removeActiveClass();
+    })
 });
 operatorButtons.forEach((button) => {
     button.addEventListener('click', continueOperation)
