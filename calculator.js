@@ -31,7 +31,8 @@ function continueOperation(event) {
     let target = event.target;
     operator = target.textContent;
     firstNumber = Number(display.value);
-    clearDisplay();
+    target.classList.add('active-operator');
+    
 }
 
 function finishOperation() {
