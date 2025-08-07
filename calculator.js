@@ -31,8 +31,8 @@ function continueOperation(event) {
     let target = event.target;
     operator = target.textContent;
     firstNumber = Number(display.value);
+    removeActiveClass();
     target.classList.add('active-operator');
-    
 }
 
 function finishOperation() {
@@ -64,6 +64,10 @@ function populateDisplay(event) {
 
 function clearDisplay() {
     display.value = '';
+}
+
+function removeActiveClass() {
+    operatorButtons.forEach((button) => button.classList.remove('active-operator'));
 }
 
 numberButtons.forEach((button) => {
