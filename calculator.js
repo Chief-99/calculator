@@ -29,6 +29,12 @@ function operate(operator, first, second) {
 
 function continueOperation(event) {
     let target = event.target;
+
+    if (firstNumber) {
+        secondNumber = display.value;
+        display.value = operate(operator, firstNumber, secondNumber);
+    }
+    
     operator = target.textContent;
     firstNumber = Number(display.value);
     removeActiveClass();
