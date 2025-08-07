@@ -1,4 +1,5 @@
 const numberButtons = document.querySelectorAll('.number-button');
+const decimalButton = document.getElementById('decimal-point');
 const operatorButtons = document.querySelectorAll('.operator-button');
 const equalsButton = document.getElementById('equals-button');
 const display = document.getElementById('display');
@@ -115,6 +116,14 @@ function enableOperator() {
     operatorButtons.forEach((button) => button.disabled = false);
 }
 
+function addDecimal() {
+    if (display.value.includes('.')) {
+        return;
+    } else {
+        display.value += '.';
+    }
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         let number = event.target.textContent;
@@ -132,6 +141,7 @@ numberButtons.forEach((button) => {
         }
     })
 });
+decimalButton.addEventListener('click', addDecimal);
 operatorButtons.forEach((button) => {
     button.addEventListener('click', continueOperation)
 });
