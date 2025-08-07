@@ -60,6 +60,7 @@ function divide(a, b) {
 function populateDisplay(event) {
     let number = event.target.textContent;
     display.value += number;
+    removeActiveClass();
 }
 
 function clearDisplay() {
