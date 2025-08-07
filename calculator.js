@@ -45,6 +45,8 @@ function finishOperation() {
     secondNumber = Number(display.value);
     let result = operate(operator, firstNumber, secondNumber);
     display.value = result;
+    firstNumber = undefined;
+    secondNumber = undefined;
 }
 
 function add(a, b) {
