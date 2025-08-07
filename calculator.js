@@ -82,6 +82,7 @@ function divide(a, b) {
 function clearDisplay() {
     display.value = '';
     removeActiveClass();
+    enableOperator();
 }
 
 function removeActiveClass() {
