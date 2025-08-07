@@ -31,10 +31,10 @@ function continueOperation(event) {
     let target = event.target;
 
     if (firstNumber) {
-        secondNumber = display.value;
+        secondNumber = Number(display.value);
         display.value = operate(operator, firstNumber, secondNumber);
     }
-    
+
     operator = target.textContent;
     firstNumber = Number(display.value);
     removeActiveClass();
@@ -65,6 +65,7 @@ function divide(a, b) {
 
 function clearDisplay() {
     display.value = '';
+    removeActiveClass();
 }
 
 function removeActiveClass() {
