@@ -6,6 +6,9 @@ const clearButton = document.getElementById('clear-button');
 let firstNumber;
 let operator;
 let secondNumber;
+const flags = {
+    newOperation: true,
+}
 
 function operate(operator, first, second) {
     let result;
@@ -47,6 +50,7 @@ function finishOperation() {
     display.value = result;
     firstNumber = undefined;
     secondNumber = undefined;
+    flags.newOperation = true;
 }
 
 function add(a, b) {
@@ -85,6 +89,11 @@ function testActiveClass() {
 numberButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         let number = event.target.textContent;
+        if (flags.newOperation) {
+            flags.newOperation = false;
+            clearDisplay();
+        }
+
         testActiveClass();
         display.value += number;
         removeActiveClass();
