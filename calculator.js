@@ -6,8 +6,10 @@ const clearButton = document.getElementById('clear-button');
 let firstNumber;
 let operator;
 let secondNumber;
+let holdingValue;
 const flags = {
     newOperation: true,
+    firstPair: false,
 }
 
 function operate(operator, first, second) {
@@ -35,23 +37,22 @@ function continueOperation(event) {
 
     if (firstNumber) {
         secondNumber = Number(display.value);
-
         if (divisionByZero()) {
             return;
         }
-
         display.value = Math.round(operate(operator, firstNumber, secondNumber) * 100) / 100;
     }
 
     operator = target.textContent;
-    firstNumber = Number(display.value);
+    holdingValue = Number(display.value);
     removeActiveClass();
     target.classList.add('active-operator');
+    enableOperator();
+    target.disabled = true;
 }
 
 function finishOperation() {
     secondNumber = Number(display.value);
-
     if (divisionByZero()) {
         return;
     }
@@ -108,6 +109,10 @@ function divisionByZero() {
     }
 }
 
+function enableOperator() {
+    operatorButtons.forEach((button) => button.disabled = false);
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         let number = event.target.textContent;
@@ -119,6 +124,10 @@ numberButtons.forEach((button) => {
         testActiveClass();
         display.value += number;
         removeActiveClass();
+        if (holdingValue) {
+            firstNumber = holdingValue;
+            holdingValue = undefined;
+        }
     })
 });
 operatorButtons.forEach((button) => {
