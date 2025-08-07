@@ -41,6 +41,7 @@ function continueOperation(event) {
             return;
         }
         display.value = Math.round(operate(operator, firstNumber, secondNumber) * 100) / 100;
+        firstNumber = undefined;
     }
 
     operator = target.textContent;
