@@ -71,6 +71,14 @@ function removeActiveClass() {
     operatorButtons.forEach((button) => button.classList.remove('active-operator'));
 }
 
+function testActiveClass() {
+    operatorButtons.forEach((button) => {
+        if (button.classList.contains('active-operator')) {
+            clearDisplay();
+        }
+    })
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', populateDisplay)
 });
