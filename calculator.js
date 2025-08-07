@@ -35,7 +35,7 @@ function continueOperation(event) {
 
     if (firstNumber) {
         secondNumber = Number(display.value);
-        display.value = operate(operator, firstNumber, secondNumber);
+        display.value = Math.round(operate(operator, firstNumber, secondNumber) * 100) / 100;
     }
 
     operator = target.textContent;
@@ -46,7 +46,7 @@ function continueOperation(event) {
 
 function finishOperation() {
     secondNumber = Number(display.value);
-    let result = operate(operator, firstNumber, secondNumber);
+    let result = Math.round(operate(operator, firstNumber, secondNumber).toFixed(2) * 100) / 100;
     display.value = result;
     firstNumber = undefined;
     secondNumber = undefined;
