@@ -35,6 +35,11 @@ function continueOperation(event) {
 
     if (firstNumber) {
         secondNumber = Number(display.value);
+
+        if (divisionByZero()) {
+            return;
+        }
+
         display.value = Math.round(operate(operator, firstNumber, secondNumber) * 100) / 100;
     }
 
@@ -46,6 +51,10 @@ function continueOperation(event) {
 
 function finishOperation() {
     secondNumber = Number(display.value);
+
+    if (divisionByZero()) {
+        return;
+    }
     let result = Math.round(operate(operator, firstNumber, secondNumber).toFixed(2) * 100) / 100;
     display.value = result;
     firstNumber = undefined;
@@ -84,6 +93,19 @@ function testActiveClass() {
             clearDisplay();
         }
     })
+}
+
+function divisionByZero() {
+    if (secondNumber === 0 && operator === '/') {
+        alert('Error! You cannot divide by zero.');
+        clearDisplay();
+        firstNumber = undefined;
+        secondNumber = undefined;
+        flags.newOperation = true;
+        return true;
+    } else {
+        return false;
+    }
 }
 
 numberButtons.forEach((button) => {
