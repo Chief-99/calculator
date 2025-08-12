@@ -83,10 +83,15 @@ main {
   align-items: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 #calculator-container {
   background-color: rgb(53, 80, 37);
   padding: 3rem;
   font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
 #display {
