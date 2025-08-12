@@ -72,7 +72,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ui styles */
-
+body {
+  background-color: #333;
+}
 
 main {
   height: 100dvh;
@@ -82,5 +84,10 @@ main {
 }
 
 #calculator-container {
-  
+  background-color: rgb(65, 97, 46);
+}
+
+#buttons-container {
+  width: 100%;
+  justify-content: space-evenly;
 }
