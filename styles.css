@@ -99,3 +99,6 @@ main {
   gap: 2rem;
 }
 
+.number-button, .operator-button {
+  padding: 1rem 2rem;
+}
