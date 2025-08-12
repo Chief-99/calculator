@@ -162,7 +162,7 @@ operatorButtons.forEach((button) => {
 equalsButton.addEventListener('click', finishOperation);
 clearButton.addEventListener('click', clearDisplay);
 display.addEventListener('keydown', deleteCharacters);
-display.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', (event) => {
     let key = event.key;
 
     if (!isNaN(Number(key))) {
