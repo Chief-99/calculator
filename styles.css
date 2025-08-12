@@ -85,7 +85,7 @@ main {
 
 #calculator-container {
   background-color: rgb(53, 80, 37);
-  padding: 2rem;
+  padding: 3rem;
   font-size: 1.5rem;
 }
 
@@ -100,14 +100,13 @@ main {
 
 #buttons-container {
   width: 100%;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: space-between;
 }
 
 #numbers-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .calc-row {
@@ -116,7 +115,7 @@ main {
 }
 
 #operator-column {
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .number-button, .operator-button {
