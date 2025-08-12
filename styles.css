@@ -99,7 +99,16 @@ main {
   gap: 2rem;
 }
 
+#numbers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.calc-row {
+  display: flex;
+  gap: 1rem;
+}
 
 .number-button, .operator-button {
   padding: 1rem 2rem;
@@ -107,6 +116,7 @@ main {
 
 #decimal-point {
   padding: 1rem 2.25rem;
+  margin-left: auto;
 }
 
 #clear-button {
