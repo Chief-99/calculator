@@ -110,6 +110,10 @@ main {
   gap: 1rem;
 }
 
+#operator-column {
+  gap: 1rem;
+}
+
 .number-button, .operator-button {
   padding: 1rem 2rem;
 }
@@ -120,7 +124,7 @@ main {
 }
 
 #clear-button {
-  padding: 0.75rem;
+  padding: 1rem;
   width: 100%;
 }
 
