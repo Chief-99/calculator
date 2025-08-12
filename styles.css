@@ -91,6 +91,8 @@ main {
 
 #display {
   margin-bottom: 2rem;
+  width: 100%;
+  font-size: 2rem;
 }
 
 #buttons-container {
