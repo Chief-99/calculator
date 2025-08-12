@@ -89,8 +89,13 @@ main {
   font-size: 2rem;
 }
 
+#display {
+  margin-bottom: 2rem;
+}
+
 #buttons-container {
   width: 100%;
   justify-content: center;
   gap: 2rem;
 }
+
