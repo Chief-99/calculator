@@ -13,6 +13,8 @@ const flags = {
     firstPair: false,
 }
 
+display.focus();
+
 function operate(operator, first, second) {
     let result;
     switch (operator) {
@@ -155,4 +157,4 @@ operatorButtons.forEach((button) => {
 });
 equalsButton.addEventListener('click', finishOperation);
 clearButton.addEventListener('click', clearDisplay);
-document.addEventListener('keydown', deleteCharacters);
+display.addEventListener('keydown', deleteCharacters);
