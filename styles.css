@@ -53,7 +53,8 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-#calculator-container {
+/* pre-ui styles */
+#buttons-container {
     display: flex;
 }
 
@@ -68,4 +69,92 @@ h1, h2, h3, h4, h5, h6 {
 
 .active-operator {
   background-color: rebeccapurple;
+}
+
+/* ui styles */
+body {
+  background-color: #333;
+}
+
+main {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: rgb(236, 236, 236);
+  border: outset rgb(128, 143, 119) 4px;
+}
+
+#calculator-container {
+  background-color: rgb(53, 80, 37);
+  padding: 3rem;
+  font-size: 2rem;
+  font-family: sans-serif;
+  border: outset rgb(128, 143, 119) 8px;
+}
+
+#display {
+  margin-bottom: 2rem;
+  width: 100%;
+  font-size: 3rem;
+  background-color: rgb(118, 161, 147);
+  font-family: 'VT323', sans-serif;
+  border: inset rgb(145, 180, 141) 4px;
+}
+
+#buttons-container {
+  width: 100%;
+  justify-content: space-between;
+}
+
+#numbers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.calc-row {
+  display: flex;
+  gap: 1rem;
+}
+
+#operator-column {
+  gap: 1.5rem;
+}
+
+.primary {
+  padding: 1rem 2rem;
+}
+
+#decimal-point {
+  padding: 1rem 2.2rem;
+  margin-left: auto;
+}
+
+#clear-button {
+  padding: 1rem;
+  width: 100%;
+}
+
+#equals-button {
+  padding: 1rem 2rem;
+}
+
+
+/* colour styles */
+.number-button , #decimal-point{
+  background-color: rgb(101, 138, 80);
+}
+
+#equals-button, #clear-button {
+  background-color: rgb(80, 110, 138);
+}
+
+.operator-button {
+  background-color: rgb(86, 107, 75);
 }
