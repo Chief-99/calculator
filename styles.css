@@ -85,6 +85,8 @@ main {
 
 #calculator-container {
   background-color: rgb(65, 97, 46);
+  padding: 2rem;
+  font-size: 2rem;
 }
 
 #buttons-container {
