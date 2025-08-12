@@ -53,6 +53,7 @@ function continueOperation(event) {
     target.classList.add('active-operator');
     enableOperator();
     target.disabled = true;
+    display.focus();
 }
 
 function finishOperation() {
@@ -149,6 +150,7 @@ numberButtons.forEach((button) => {
             firstNumber = holdingValue;
             holdingValue = undefined;
         }
+        display.focus();
     })
 });
 decimalButton.addEventListener('click', addDecimal);
