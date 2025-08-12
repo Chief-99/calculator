@@ -91,5 +91,6 @@ main {
 
 #buttons-container {
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 2rem;
 }
