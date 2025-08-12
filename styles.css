@@ -93,7 +93,7 @@ button {
 #calculator-container {
   background-color: rgb(53, 80, 37);
   padding: 3rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: sans-serif;
   border: outset rgb(128, 143, 119) 8px;
 }
