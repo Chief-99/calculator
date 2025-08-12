@@ -87,6 +87,7 @@ button {
   cursor: pointer;
   border: none;
   color: rgb(236, 236, 236);
+  border: outset rgb(128, 143, 119) 4px;
 }
 
 #calculator-container {
@@ -94,6 +95,7 @@ button {
   padding: 3rem;
   font-size: 1.5rem;
   font-family: sans-serif;
+  border: outset rgb(128, 143, 119) 8px;
 }
 
 #display {
