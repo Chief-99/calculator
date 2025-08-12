@@ -84,7 +84,7 @@ main {
 }
 
 #calculator-container {
-  background-color: rgb(65, 97, 46);
+  background-color: rgb(53, 80, 37);
   padding: 2rem;
   font-size: 1.5rem;
 }
@@ -92,7 +92,10 @@ main {
 #display {
   margin-bottom: 2rem;
   width: 100%;
-  font-size: 2rem;
+  font-size: 3rem;
+  background-color: rgb(118, 161, 147);
+  font-family: 'VT323', sans-serif;
+  border: inset rgb(145, 180, 141) 4px;
 }
 
 #buttons-container {
