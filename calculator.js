@@ -124,6 +124,14 @@ function addDecimal() {
     }
 }
 
+function deleteCharacters(event) {
+    let key = event.key;
+    
+    if (key === 'Backspace') {
+        display.value = display.value.slice(0, -1);
+    }
+}
+
 numberButtons.forEach((button) => {
     button.addEventListener('click', (event) => {
         let number = event.target.textContent;
@@ -147,3 +155,4 @@ operatorButtons.forEach((button) => {
 });
 equalsButton.addEventListener('click', finishOperation);
 clearButton.addEventListener('click', clearDisplay);
+document.addEventListener('keydown', deleteCharacters);
