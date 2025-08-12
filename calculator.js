@@ -15,6 +15,23 @@ const flags = {
 
 display.focus();
 
+function populateDisplay(event) {
+    let number = event.target.textContent;
+        if (flags.newOperation) {
+            flags.newOperation = false;
+            clearDisplay();
+        }
+
+        testActiveClass();
+        display.value += number;
+        removeActiveClass();
+        if (holdingValue) {
+            firstNumber = holdingValue;
+            holdingValue = undefined;
+        }
+        display.focus();
+}
+
 function operate(operator, first, second) {
     let result;
     switch (operator) {
@@ -136,8 +153,20 @@ function deleteCharacters(event) {
 }
 
 numberButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-        let number = event.target.textContent;
+    button.addEventListener('click', populateDisplay)
+});
+decimalButton.addEventListener('click', addDecimal);
+operatorButtons.forEach((button) => {
+    button.addEventListener('click', continueOperation)
+});
+equalsButton.addEventListener('click', finishOperation);
+clearButton.addEventListener('click', clearDisplay);
+display.addEventListener('keydown', deleteCharacters);
+display.addEventListener('keydown', (event) => {
+    let key = event.key;
+
+    if (!isNaN(Number(key))) {
+        let number = key;
         if (flags.newOperation) {
             flags.newOperation = false;
             clearDisplay();
@@ -151,12 +180,5 @@ numberButtons.forEach((button) => {
             holdingValue = undefined;
         }
         display.focus();
-    })
-});
-decimalButton.addEventListener('click', addDecimal);
-operatorButtons.forEach((button) => {
-    button.addEventListener('click', continueOperation)
-});
-equalsButton.addEventListener('click', finishOperation);
-clearButton.addEventListener('click', clearDisplay);
-display.addEventListener('keydown', deleteCharacters);
+    }
+})
