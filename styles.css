@@ -92,14 +92,14 @@ button {
 #calculator-container {
   background-color: rgb(53, 80, 37);
   padding: 3rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: sans-serif;
   border: outset rgb(128, 143, 119) 8px;
+  text-align: center;
 }
 
 #display {
   margin-bottom: 2rem;
-  width: 100%;
   font-size: 3rem;
   background-color: rgb(118, 161, 147);
   font-family: 'VT323', sans-serif;
@@ -107,31 +107,31 @@ button {
 }
 
 #buttons-container {
-  width: 100%;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
 }
 
 #numbers-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .calc-row {
   display: flex;
-  gap: 1rem;
-}
-
-#operator-column {
   gap: 1.5rem;
 }
 
+#operator-column {
+  gap: 2rem;
+}
+
 .primary {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
 }
 
 #decimal-point {
-  padding: 1rem 2.2rem;
+  padding: 0.75rem 1.6rem;
   margin-left: auto;
 }
 
