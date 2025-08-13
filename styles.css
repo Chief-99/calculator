@@ -67,9 +67,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: right;
 }
 
-.active-operator {
-  background-color: rebeccapurple;
-}
 
 /* ui styles */
 body {
@@ -149,12 +146,32 @@ button {
 /* colour styles */
 .number-button , #decimal-point{
   background-color: rgb(101, 138, 80);
+  transition: background-color 200ms;
 }
 
 #equals-button, #clear-button {
   background-color: rgb(80, 110, 138);
+  transition: background-color 200ms;
 }
 
 .operator-button {
   background-color: rgb(86, 107, 75);
+  transition: background-color 200ms;
+}
+
+.active-operator {
+  background-color: rgb(121, 91, 151);
+}
+
+/* hover and active styles */
+.number-button:hover, #decimal-point:hover {
+  background-color: rgb(71, 95, 57);
+}
+
+#equals-button:hover, #clear-button:hover {
+  background-color: rgb(68, 96, 122);
+}
+
+.operator-button:hover {
+  background-color: rgb(70, 87, 62);
 }
