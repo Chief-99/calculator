@@ -164,17 +164,19 @@ button {
 }
 
 /* hover styles */
-.number-button:hover, #decimal-point:hover {
-  background-color: rgb(71, 95, 57);
-}
-
-#equals-button:hover, #clear-button:hover {
-  background-color: rgb(68, 96, 122);
-}
-
-.operator-button:hover {
-  background-color: rgb(70, 87, 62);
-  outline: outset rgb(103, 124, 100) 5px;
+@media (hover: hover) {
+  .number-button:hover, #decimal-point:hover {
+    background-color: rgb(71, 95, 57);
+  }
+  
+  #equals-button:hover, #clear-button:hover {
+    background-color: rgb(68, 96, 122);
+  }
+  
+  .operator-button:hover {
+    background-color: rgb(70, 87, 62);
+    outline: outset rgb(103, 124, 100) 5px;
+  }
 }
 
 /* active styles */

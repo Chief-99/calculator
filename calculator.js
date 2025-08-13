@@ -157,7 +157,8 @@ numberButtons.forEach((button) => {
 });
 decimalButton.addEventListener('click', addDecimal);
 operatorButtons.forEach((button) => {
-    button.addEventListener('click', continueOperation)
+    button.addEventListener('click', continueOperation);
+    button.addEventListener('touchstart', continueOperation);
 });
 equalsButton.addEventListener('click', finishOperation);
 clearButton.addEventListener('click', clearDisplay);
