@@ -84,7 +84,9 @@ button {
   cursor: pointer;
   border: none;
   color: rgb(236, 236, 236);
-  border: outset rgb(128, 143, 119) 4px;
+  outline: outset rgb(128, 143, 119) 5px;
+  transition: background-color 150ms, outline 150ms;
+
 }
 
 #calculator-container {
@@ -101,7 +103,7 @@ button {
   font-size: 3rem;
   background-color: rgb(118, 161, 147);
   font-family: 'VT323', sans-serif;
-  border: inset rgb(145, 180, 141) 4px;
+  outline: inset rgb(145, 180, 141) 4px;
 }
 
 #buttons-container {
@@ -146,24 +148,22 @@ button {
 /* colour styles */
 .number-button , #decimal-point{
   background-color: rgb(101, 138, 80);
-  transition: background-color 200ms;
 }
 
 #equals-button, #clear-button {
   background-color: rgb(80, 110, 138);
-  transition: background-color 200ms;
 }
 
 .operator-button {
   background-color: rgb(86, 107, 75);
-  transition: background-color 200ms;
 }
 
 .active-operator {
   background-color: rgb(121, 91, 151);
+  outline: outset rgb(160, 131, 172) 5px;
 }
 
-/* hover and active styles */
+/* hover styles */
 .number-button:hover, #decimal-point:hover {
   background-color: rgb(71, 95, 57);
 }
@@ -174,4 +174,21 @@ button {
 
 .operator-button:hover {
   background-color: rgb(70, 87, 62);
+  outline: outset rgb(103, 124, 100) 5px;
+}
+
+/* active styles */
+.number-button:active, #decimal-point:active {
+  background-color: rgb(57, 77, 46);
+  outline: outset rgb(103, 124, 100) 3px;
+}
+
+#equals-button:active, #clear-button:active {
+  background-color: rgb(58, 82, 104);
+  outline: outset rgb(103, 124, 100) 3px;
+}
+
+.operator-button:active {
+  background-color: rgb(59, 73, 52);
+  outline: outset rgb(103, 124, 100) 3px;
 }
